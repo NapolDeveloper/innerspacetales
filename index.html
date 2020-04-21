@@ -10,9 +10,14 @@
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/effect.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
 
     <!-- js -->
     <script src="assets/js/effect.js" async defer></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+      new WOW().init(); //wow.js 라이브러리 스크롤 애니메이션
+    </script>
   </head>
   <body>
     <div class="starts">
@@ -32,7 +37,7 @@
         </div>
       </nav>
     </header>
-    <div class="bannerWrapper">
+    <div class="animated bannerWrapper tada">
       <div class="bannerTitle">
         Undertale escape 2!
       </div>
@@ -40,5 +45,9 @@
         is comming soon
       </div>
     </div>
+
+    <section class="container">
+      <button class="playBtn"><span>PLAY</span></button>
+    </section>
   </body>
 </html>
