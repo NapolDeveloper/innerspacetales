@@ -11,10 +11,19 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/effect.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
 
     <!-- js -->
     <script src="assets/js/effect.js" async defer></script>
     <script src="assets/js/wow.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#menu").load("assets/html/menuIndex.html"); // 원하는 파일 경로를 삽입하면 된다
+        $("#footer").load("assets/html/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+      });
+    </script>
+
     <script>
       new WOW().init(); //wow.js 라이브러리 스크롤 애니메이션
     </script>
@@ -29,12 +38,7 @@
     </div>
     <header>
       <nav>
-        <div class="menuWrapper">
-          <a href="index.html" class="menuBtn">HOME</a>
-          <a href="#" class="menuBtn">DOWNLOAD</a>
-          <a href="assets/html/character.html" class="menuBtn">CHARACTER</a>
-          <a href="assets/html/developer.html" class="menuBtn">DEVELOPER</a>
-        </div>
+        <div id="menu"></div>
       </nav>
     </header>
     <div class="animated bannerWrapper tada">
@@ -45,9 +49,12 @@
         is comming soon
       </div>
     </div>
-
-    <section class="container">
+    <section class="container" style="flex-direction: column;">
+      <p style="font-size: 2em; margin-bottom: 0.5em; letter-spacing: .05em;">
+        Play on your mobile and computer!
+      </p>
       <button class="playBtn"><span>PLAY</span></button>
     </section>
+    <div id="footer"></div>
   </body>
 </html>
