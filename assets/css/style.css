@@ -4,7 +4,7 @@ html {
 body {
   background-color: black;
   color: white;
-  font-family: Impact;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   animation: fadeIn 2s forwards;
   margin: 0;
   padding: 0;
