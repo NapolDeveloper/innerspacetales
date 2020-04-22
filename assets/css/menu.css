@@ -19,7 +19,7 @@
   font-size: 1.7em;
 }
 
-/* mobile menu */
+/* mobile btn */
 .mobileBtn {
   position: fixed;
   top: 50px;
@@ -34,6 +34,38 @@
 }
 .mobileBtn i {
   font-size: 2.5em;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100;
+  width: 0%;
+  height: 100%;
+  background-color: #141414;
+  z-index: 1000;
+  overflow: hidden;
+  float: left;
+  transition: 0.5s;
+}
+.mobWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mobWrap a {
+  padding: 20px;
+  text-decoration: none;
+  font-size: 2em;
+  display: block;
+  transition: all 0.5s ease;
+  color: white;
+}
+.mobWrap a:hover {
+  color: #ff3b3b;
 }
 
 /* media set */

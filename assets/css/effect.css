@@ -5,7 +5,7 @@ div.clickEffect {
   border-color: white;
   border-radius: 50%;
   animation: clickEffect 0.4s ease-out;
-  z-index: 999;
+  z-index: 999999;
 }
 @keyframes clickEffect {
   0% {
