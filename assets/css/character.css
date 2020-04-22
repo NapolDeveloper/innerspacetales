@@ -66,6 +66,9 @@ body {
 }
 /* media set */
 @media (min-width: 1025px) /* PC */ {
+  .card {
+    height: 560px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) /* 태블릿 */ {
   .column {
