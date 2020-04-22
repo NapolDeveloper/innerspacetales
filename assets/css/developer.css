@@ -13,3 +13,12 @@
   letter-spacing: 0.05em;
   word-spacing: 0.5em;
 }
+@media (min-width: 1025px) /* PC */ {
+}
+@media (min-width: 768px) and (max-width: 1024px) /* 태블릿 */ {
+}
+@media (max-width: 767px) /* 모바일 */ {
+  .devText {
+    font-size: 1em;
+  }
+}
