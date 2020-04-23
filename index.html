@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="assets/css/effect.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/music.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
       rel="stylesheet"
     />
 
     <!-- js -->
+    <script src="assets/js/music.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/effect.js" async defer></script>
     <script src="assets/js/wow.min.js"></script>
@@ -27,6 +29,7 @@
       $(document).ready(function () {
         $("#menu").load("assets/html/menuIndex.html"); // 원하는 파일 경로를 삽입하면 된다
         $("#footer").load("assets/html/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        // $("#music").load("assets/html/music.html");
       });
     </script>
     <!-- tes -->
@@ -62,5 +65,12 @@
       <button class="playBtn"><span>PLAY</span></button>
     </section>
     <div id="footer"></div>
+    <audio
+      id="myAudio"
+      src="assets/music/backgroundMusicHome.wav"
+      preload="auto"
+      autoplay
+      loop
+    ></audio>
   </body>
 </html>

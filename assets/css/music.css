@@ -1,0 +1,29 @@
+.audio {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  right: 50px;
+  width: 100px;
+  height: 50px;
+}
+.audioBtn {
+  font-size: 14pt;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.audioBtn:hover {
+  color: #3befff;
+}
+@media (max-width: 767px) /* 모바일 */ {
+  .audioBtn {
+    font-size: 10pt;
+  }
+  .audio {
+    top: 25px;
+    right: 25px;
+  }
+}

@@ -28,7 +28,7 @@
   transition: all 0.4s ease;
 }
 .icon i:hover {
-  color: violet;
+  color: #3befff;
 }
 /* media set */
 @media (min-width: 1025px) /* PC */ {

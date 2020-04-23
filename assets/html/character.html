@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/effect.css" />
     <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/music.css" />
     <link rel="stylesheet" href="../css/animate.css" />
     <link rel="stylesheet" href="../css/character.css" />
     <link rel="stylesheet" href="../css/footer.css" />
@@ -21,11 +22,12 @@
 
     <!-- js -->
     <script src="../js/menu.js"></script>
+    <script src="../js/music.js"></script>
     <script src="../js/effect.js" async defer></script>
     <script src="../js/wow.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function() {
+      $(document).ready(function () {
         $("#menu").load("../html/menu.html"); // 원하는 파일 경로를 삽입하면 된다
         $("#footer").load("../html/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
       });
@@ -36,7 +38,7 @@
   </head>
   <body>
     <div class="starts">
-      <div class="p p-1" style="z-index: -1"></div>
+      <div class="p p-1" style="z-index: -1;"></div>
       <div class="p p-2"></div>
       <div class="p p-3"></div>
       <div class="p p-4"></div>
@@ -68,7 +70,7 @@
       </div>
     </div>
     <div class="column">
-      <div class="animated card bounceInLeft" style="animation-delay: .3s;">
+      <div class="animated card bounceInLeft" style="animation-delay: 0.3s;">
         <img src="../images/blueSoul.png" style="width: 100%; padding: 20px;" />
         <div class="cardContainer">
           <h2 class="soul-name">blue soul</h2>
@@ -79,7 +81,7 @@
       </div>
     </div>
     <div class="column">
-      <div class="animated card bounceInLeft" style="animation-delay: .6s;">
+      <div class="animated card bounceInLeft" style="animation-delay: 0.6s;">
         <img
           src="../images/napolSoul.png"
           style="width: 100%; padding: 20px;"
@@ -115,7 +117,7 @@
       <div
         class="wow card bounceInLeft"
         data-wow-delay=".5s"
-        style="animation-delay: .3s;"
+        style="animation-delay: 0.3s;"
       >
         <img
           src="../images/yellowSoul.png"
@@ -133,7 +135,7 @@
       <div
         class="wow card bounceInLeft"
         data-wow-delay="1s"
-        style="animation-delay: .6s;"
+        style="animation-delay: 0.6s;"
       >
         <img
           src="../images/purpleSoul.png"
@@ -148,5 +150,12 @@
       </div>
     </div>
     <div id="footer" style="bottom: 0;"></div>
+    <audio
+      id="myAudio"
+      src="../music/backgroundMusicSoul.wav"
+      preload="auto"
+      autoplay
+      loop
+    ></audio>
   </body>
 </html>
