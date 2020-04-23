@@ -28,6 +28,7 @@
   color: white;
   opacity: 1;
   transition: all 0.4s ease;
+  z-index: 900;
 }
 .mobileBtn:hover {
   opacity: 0.4;
@@ -82,5 +83,9 @@
 @media (max-width: 767px) /* 모바일 */ {
   .menuWrapper .menuBtn {
     display: none;
+  }
+  .mobileBtn {
+    top: 30px;
+    left: 30px;
   }
 }
