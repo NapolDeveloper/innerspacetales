@@ -4,7 +4,7 @@ html {
 body {
   background-color: black;
   color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Bangers", sans-serif;
   animation: fadeIn 2s forwards;
   margin: 0;
   padding: 0;
@@ -75,6 +75,7 @@ a {
   color: white;
   font-size: 7em;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 .bannerTitle::after {
   content: "";
@@ -87,6 +88,7 @@ a {
 .bannerSub {
   font-size: 3em;
   animation: 5s subColor infinite alternate;
+  letter-spacing: 0.1em;
 }
 
 /* titleImg */
@@ -121,6 +123,7 @@ a {
 .playBtn {
   width: 300px;
   height: 70px;
+  margin: 0 10px;
   border: 1px solid white;
   border-radius: 10px;
   background-color: transparent;
@@ -203,5 +206,13 @@ a {
   }
   .buttonDes {
     font-size: 1em;
+  }
+  .playBtn {
+    width: 200px;
+    height: 50px;
+    font-size: 1.5em;
+  }
+  .bannerWrapper {
+    height: 200px;
   }
 }
