@@ -133,6 +133,9 @@ a {
   transition: all 0.5s;
   color: white;
 }
+.playBtn:hover {
+  border: 1px solid #ebe834;
+}
 .playBtn span {
   display: inline-block;
   position: relative;
