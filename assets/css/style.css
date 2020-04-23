@@ -24,6 +24,9 @@ a {
   height: 1px;
   background-color: white;
   position: fixed;
+  -webkit-animation-name: particleAnimation;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
   animation-name: particleAnimation;
   animation-timing-function: linear;
   animation-iteration-count: infinite;

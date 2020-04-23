@@ -14,7 +14,7 @@
   word-spacing: 0.5em;
 }
 .easterEgg {
-  opacity: 0.01;
+  opacity: 0.05;
   cursor: pointer;
 }
 @media (min-width: 1025px) /* PC */ {
