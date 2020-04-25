@@ -43,6 +43,10 @@ body {
   padding: 20px;
   width: 600px;
 }
+.overSoulGet {
+  font-weight: bold;
+  color: #ff3b3b;
+}
 
 .column {
   float: left;
