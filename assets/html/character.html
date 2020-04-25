@@ -21,15 +21,16 @@
     />
 
     <!-- js -->
+    <script defer src="../js/music.js"></script>
+    <script defer src="../js/character.js"></script>
     <script src="../js/menu.js"></script>
-    <script src="../js/music.js"></script>
     <script src="../js/effect.js" async defer></script>
     <script src="../js/wow.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $("#menu").load("../html/menu.html"); // 원하는 파일 경로를 삽입하면 된다
-        $("#footer").load("../html/footer.html"); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        $('#menu').load('../html/menu.html'); // 원하는 파일 경로를 삽입하면 된다
+        $('#footer').load('../html/footer.html'); // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
       });
     </script>
     <script>
@@ -37,6 +38,18 @@
     </script>
   </head>
   <body>
+    <div id="overlay">
+      <div class="overCardWrap">        
+        <div class="overCard"">
+          <div class="overText"> 
+            <h2 id="overSoulName" class="soul-name">soul name</h2>
+            <p id="overSoulType" class="title">type : type</p>
+            <p id="overSoulDes" class="des">description</p>
+          </div>
+        <p><button class="soulBtn" onclick="overOff()">닫기</button></p>
+      </div>
+      </div>
+    </div>
     <div class="starts">
       <div class="p p-1" style="z-index: -1;"></div>
       <div class="p p-2"></div>
@@ -54,81 +67,75 @@
         souls
       </div>
     </div>
-
     <div class="column">
-      <div class="animated card bounceInLeft">
-        <img
-          src="../images/basicSoul.png"
-          style="width: 100%; padding: 20px;"
-        />
-        <div class="cardContainer">
-          <h2 class="soul-name">red soul</h2>
-          <p class="title">type : balance</p>
-          <p class="des">A precious soul to be with you forever.</p>
-          <!-- <p><button class="soulBtn">더보기</button></p> -->
+      <div class="animated card bounceInLeft" style="animation-delay: 0.3s;">
+        <div>
+          <img src="../images/basicSoul.png" style="width: 100%; padding: 20px;" />
+          <div class="cardContainer">
+            <h2 class="soul-name">red soul</h2>
+            <p class="title">type : balance</p>
+            <p class="des">A precious soul to be with you forever.</p>
+          </div>
         </div>
+        <p></p><button id="basic" class="soulBtn" onclick="overOn()">더보기</button></p>
       </div>
     </div>
     <div class="column">
       <div class="animated card bounceInLeft" style="animation-delay: 0.3s;">
-        <img src="../images/blueSoul.png" style="width: 100%; padding: 20px;" />
-        <div class="cardContainer">
-          <h2 class="soul-name">blue soul</h2>
-          <p class="title">type : tank</p>
-          <p class="des">It is a strong-willed but slow-running soul.</p>
-          <!-- <p></p><button class="soulBtn">더보기</button></p> -->
+        <div>
+          <img src="../images/blueSoul.png" style="width: 100%; padding: 20px;" />
+          <div class="cardContainer">
+            <h2 class="soul-name">blue soul</h2>
+            <p class="title">type : tank</p>
+            <p class="des">It is a strong-willed but slow-running soul.</p>
+          </div>
         </div>
+        <p></p><button id="blue" class="soulBtn" onclick="overOn()">더보기</button></p>
       </div>
     </div>
     <div class="column">
-      <div class="animated card bounceInLeft" style="animation-delay: 0.6s;">
-        <img
-          src="../images/napolSoul.png"
-          style="width: 100%; padding: 20px;"
-        />
-        <div class="cardContainer">
-          <h2 class="soul-name">napol soul</h2>
-          <p class="title">type : control</p>
-          <p class="des">
-            There's a hidden soul in the program! You can find it on the web!
-          </p>
-          <!-- <p></p><button class="soulBtn">더보기</button></p> -->
+      <div class="animated card bounceInLeft" style="animation-delay: 0.3s;">
+        <div>
+          <img src="../images/napolSoul.png" style="width: 100%; padding: 20px;" />
+          <div class="cardContainer">
+            <h2 class="soul-name">napol soul</h2>
+            <p class="title">type : control</p>
+            <p class="des">There's a hidden soul in the program!</p>
+          </div>
         </div>
+        <p></p><button id="napol" class="soulBtn" onclick="overOn()">더보기</button></p>
       </div>
     </div>
 
     <!-- 2번째 줄 -->
-
     <div class="column">
       <div class="wow card bounceInLeft" data-wow-delay="0.2s">
-        <img
-          src="../images/greenSoul.png"
-          style="width: 100%; padding: 20px;"
-        />
-        <div class="cardContainer">
-          <h2 class="soul-name">green soul</h2>
-          <p class="title">type : balance</p>
-          <p class="des">Right and left, up and down very fast!</p>
-          <!-- <p><button class="soulBtn">더보기</button></p> -->
+        <div>
+          <img src="../images/greenSoul.png" style="width: 100%; padding: 20px;" />
+          <div class="cardContainer">
+            <h2 class="soul-name">green soul</h2>
+            <p class="title">type : balance</p>
+            <p class="des">그린 그린 그린 그린 그린 그린 그린 그린 그린 그린 그린 그린 </p>
+          </div>
         </div>
+        <p></p><button id="green" class="soulBtn" onclick="overOn()">더보기</button></p>
       </div>
     </div>
     <div class="column">
       <div
-        class="wow card bounceInLeft"
-        data-wow-delay=".5s"
-        style="animation-delay: 0.3s;"
-      >
-        <img
-          src="../images/yellowSoul.png"
-          style="width: 100%; padding: 20px;"
-        />
-        <div class="cardContainer">
-          <h2 class="soul-name">yellow soul</h2>
-          <p class="title">type : speed</p>
-          <p class="des">Right and left, up and down very fast!</p>
-          <!-- <p></p><button class="soulBtn">더보기</button></p> -->
+      class="wow card bounceInLeft"
+      data-wow-delay=".5s"
+      style="animation-delay: 0.3s;"
+    >
+        <div>
+          <img src="../images/yellowSoul.png" style="width: 100%; padding: 20px;" />
+          <div class="cardContainer">
+            <h2 class="soul-name">yellow soul</h2>
+            <p class="title">type : speed</p>
+            <p class="des">Right and left, up and down very fast!</p>
+          </div>
         </div>
+        <p></p><button id="yellow" class="soulBtn" onclick="overOn()">더보기</button></p>
       </div>
     </div>
     <div class="column">
@@ -137,16 +144,15 @@
         data-wow-delay="1s"
         style="animation-delay: 0.6s;"
       >
-        <img
-          src="../images/purpleSoul.png"
-          style="width: 100%; padding: 20px;"
-        />
-        <div class="cardContainer">
-          <h2 class="soul-name">purple soul</h2>
-          <p class="title">type : joker</p>
-          <p class="des">Spiders have eight legs.</p>
-          <!-- <p></p><button class="soulBtn">더보기</button></p> -->
+        <div>
+          <img src="../images/purpleSoul.png" style="width: 100%; padding: 20px;" />
+          <div class="cardContainer">
+            <h2 class="soul-name">purple soul</h2>
+            <p class="title">type : joker</p>
+            <p class="des">Joker!</p>
+          </div>
         </div>
+        <p></p><button id="purple" class="soulBtn" onclick="overOn()">더보기</button></p>
       </div>
     </div>
     <div id="footer" style="bottom: 0;"></div>

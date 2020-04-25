@@ -1,7 +1,9 @@
+'use strict';
 window.onload = function () {
-  var myAudio = document.getElementById("myAudio");
+  let myAudio = document.getElementById('myAudio');
+  myAudio.volume = 0;
 };
-var isPlaying = true;
+let isPlaying = true;
 
 function musicPlay() {
   if (isPlaying == false) {

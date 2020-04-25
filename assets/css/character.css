@@ -10,6 +10,40 @@ html {
 body {
   color: white;
 }
+/* overlay */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  /* z-index는 수정 해야 함 */
+
+  transition: all 0.5s ease;
+}
+.overCardWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.overCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(178, 243, 255, 0.2);
+  height: 600px;
+  transition: all 0.5s ease;
+  padding: 20px;
+  width: 600px;
+}
+
 .column {
   float: left;
   width: 33%;
@@ -17,19 +51,21 @@ body {
   padding: 0 80px;
 }
 .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(178, 243, 255, 0.2);
-  height: 460px;
+  height: 700px;
   transition: all 0.5s ease;
+  padding: 0 16px;
 }
 .card:hover {
   color: yellow;
 }
-.cardContainer {
-  padding: 0 16px;
-}
 .cardContainer::after,
 .row::after {
-  content: "";
+  content: '';
   clear: both;
   display: table;
 }
@@ -48,7 +84,6 @@ body {
 .soulBtn {
   width: 100%;
   display: inline-block;
-
   border: 1px solid white;
   background-color: transparent;
   padding: 8px;
@@ -66,13 +101,13 @@ body {
 }
 /* media set */
 @media (min-width: 1025px) /* PC */ {
-  .card {
-    height: 660px;
-  }
 }
 @media (min-width: 768px) and (max-width: 1024px) /* 태블릿 */ {
   .column {
     padding: 0 50px;
+  }
+  .card {
+    height: 500px;
   }
 }
 @media (max-width: 767px) /* 모바일 */ {
@@ -82,5 +117,9 @@ body {
   .column {
     width: 100%;
     display: block;
+  }
+  .overCard {
+    width: 300px;
+    padding: 50px;
   }
 }
