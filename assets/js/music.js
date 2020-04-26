@@ -1,6 +1,7 @@
 'use strict';
 window.onload = function () {
   let myAudio = document.getElementById('myAudio');
+  // 후에 0.1로 수정
   myAudio.volume = 0.1;
 };
 let isPlaying = true;
@@ -19,15 +20,15 @@ function pausePlay() {
   }
 }
 function volumeUp() {
-  if (myAudio.volume <= 0.8) {
-    myAudio.volume += 0.2;
+  if (myAudio.volume <= 0.5) {
+    myAudio.volume += 0.1;
   } else {
     console.log(myAudio.volume);
   }
 }
 function volumeDown() {
-  if (myAudio.volume >= 0.2) {
-    myAudio.volume -= 0.2;
+  if (myAudio.volume >= 0.1) {
+    myAudio.volume -= 0.1;
   } else {
     console.log(myAudio.volume);
   }

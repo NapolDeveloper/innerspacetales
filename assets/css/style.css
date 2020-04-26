@@ -4,7 +4,7 @@ html {
 body {
   background-color: black;
   color: white;
-  font-family: "Bangers", sans-serif;
+  font-family: 'Bangers', sans-serif;
   animation: fadeIn 2s forwards;
   margin: 0;
   padding: 0;
@@ -34,7 +34,7 @@ a {
 .p::before {
   position: absolute;
   display: block;
-  content: "";
+  content: '';
   width: 100px;
   right: 1px;
   top: 0px;
@@ -48,21 +48,50 @@ a {
 .p-1 {
   animation-duration: 10s;
 }
+.p-1::before {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 255, 8, 0.4) 100%
+  );
+}
 .p-2 {
   animation-duration: 13s;
   top: 60%;
 }
+
 .p-3 {
   animation-duration: 20s;
   top: 90%;
+}
+.p-3::before {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 238, 0, 0.4) 100%
+  );
 }
 .p-4 {
   animation-duration: 15s;
   top: 45%;
 }
+.p-4::before {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 251, 255, 0.4) 100%
+  );
+}
 .p-5 {
   animation-duration: 8s;
   top: 20%;
+}
+.p-5::before {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 58, 58, 0.4) 100%
+  );
 }
 
 /* banner */
@@ -81,7 +110,7 @@ a {
   letter-spacing: 0.1em;
 }
 .bannerTitle::after {
-  content: "";
+  content: '';
   display: block;
   background-color: white;
   height: 2px;
@@ -145,7 +174,7 @@ a {
   transition: 0.5s;
 }
 .playBtn span::after {
-  content: "\00bb";
+  content: '\00bb';
   position: absolute;
   opacity: 0;
   top: 0;
@@ -174,8 +203,11 @@ a {
   0% {
     color: white;
   }
-  50% {
+  33% {
     color: #ebe834;
+  }
+  66% {
+    color: #6cff3b;
   }
   100% {
     color: #ff3b3b;
